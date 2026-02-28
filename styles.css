@@ -1,13 +1,83 @@
-body {
-    margin: 0;
+body{
+    margin: 0px;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    background-attachment: fixed;
+}
+
+.spacer {
     height: 100vh;
 }
 
-img {
-    max-width: 20%;
-    height: auto;
+.panel {
+    background-color: rgba(0, 0, 0, 0.267);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    font-family: 'ProFontWindows Nerd Font';
+    color: rgba(255, 255, 255, 0.925);
+    font-size: 30px;
+}
+
+.textbox {
+    position: relative;
+    background-color: rgba(27, 39, 43, 0.466);
+    width: 80%;
+    max-width: 1200px;
+    height: 75px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.textbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.144) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    background-size: 1000% 1000%;
+
+    pointer-events: none;
+
+    animation: shine 3s infinite linear;
+}
+
+.textbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 10px rgba(0, 0, 0, .1);
+    pointer-events: none;
+}
+
+.text-content {
+    margin-left: 220px;
 }
