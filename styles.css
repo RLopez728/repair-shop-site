@@ -83,6 +83,14 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
+#Sidebar img {
+    margin-top: auto;
+    align-self: center;
+    width: 200px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
 /* ====================== Front Page Panel ====================== */
 #FrontPage {
     background-color: rgba(0, 0, 0, 0.767);
