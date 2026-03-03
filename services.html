@@ -1,39 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Services | Hundred Plus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Hundred Plus</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Our Services</h1>
-    <p>Professional computer repair, upgrades, and recovery.</p>
-  </header>
+  <div class="bg-fixed"></div>
 
-  <main id="ServicesPage">
+  <button id="menuButton">&#9776;</button>
 
-    <section class="service-card">
-      <h2>Hardware Repair</h2>
-      <p>Screen replacements, motherboard diagnostics, power issues, cooling repairs.</p>
-    </section>
+  <nav id="Sidebar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
 
-    <section class="service-card">
-      <h2>Virus & Malware Removal</h2>
-      <p>System cleanup, security hardening, and performance optimization.</p>
-    </section>
+    <div class="panel" id="Logo"></div>
+  </nav>
 
-    <section class="service-card">
-      <h2>Data Recovery</h2>
-      <p>Logical recovery from corrupted drives and accidental deletions.</p>
-    </section>
+  <div class="spacer" id="Spacer1"></div>
 
-    <section class="service-card">
-      <h2>Upgrades & Custom Builds</h2>
-      <p>SSD upgrades, RAM upgrades, custom gaming and workstation builds.</p>
-    </section>
+  <div class="panel" id="FrontPage">
 
-  </main>
+    <div class="textbox" id="Title">
+      <div class="text-content">
+        <h1>Our Services</h1>
+      </div>
+    </div>
+
+    <div class="spacer" id="Spacer7"></div>
+
+    <div class="panel-row" id="Services">
+
+      <div class="textbox" id="Service1">
+        <div class="text-content">
+            <h1>
+                󱣢
+            </h1>
+            <h2>
+                Virus & Malware Removal
+            </h2>
+            <h3>
+                Complete system scans and cleanup.
+                removal of spyware, ransomware, adware,
+                trojans and bloatware.
+                Security hardening to prevent future infections.
+                Performance Optimization after cleanup.
+            </h3>
+        </div>
+      </div>
+
+      <div class="textbox" id="Service2">
+        <div class="text-content">
+            <h1>
+                
+            </h1>
+            <h2>
+                Hardware Repair
+            </h2>
+            <h3>
+                Battery replacement and power management solutions.
+                Motherboard diagnostics and component based repair.
+                Cooling system maintenance and thermal paste replacement.
+            </h3>
+        </div>
+      </div>
+
+      <div class="textbox" id="Service1">
+        <div class="text-content">
+            <h1>
+                󱘸
+            </h1>
+            <h2>
+                Data Recovery
+            </h2>
+            <h3>
+                Recover accidentally deleted files or folders.
+                Restore data from corrupted hard drives or SSDs.
+                Repair damaged positions or file systems.
+                Transfer data safely to new devices.
+            </h3>
+        </div>
+      </div>
+
+      <div class="textbox" id="Service2">
+        <div class="text-content">
+            <h1>
+                󰖳
+            </h1>
+            <h2>
+                Software Installation & Reinstallation
+            </h2>
+            <h3>
+                Fresh OS installations for Windows or Linux
+                Reinstallation of operating systems to restore performance.
+                Install essential drivers and updates.
+                Setup productivity software (Office 365, etc.).
+                Configure system settings and security.
+            </h3>
+        </div>
+      </div>
+
+      <div class="textbox" id="Service3">
+        <div class="text-content">
+            <h1>
+                
+            </h1>
+            <h2>
+                Upgrades & Custom Builds
+            </h2>
+            <h3>
+                Install and upgrade RAM, SSDs, GPUs, and CPUs.
+                Build custom PCs for gaming, workstations, or general use.
+                Optimize system performance for specific tasks (editing, gaming, programming).
+                Upgrade cooling, power supply, or peripherals.
+            </h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="spacer" id="Spacer5"></div>
+
+    <div class="cta">
+      <h1>
+        Let us help you today :)
+      </h1>
+      <a href="https://calendar.app.google/EMzo36Dbgrenk4398" target="_blank" class="book-btn">
+        BOOK APPOINTMENT
+      </a>
+    </div>
+
+    <div class="spacer" id="Spacer6"></div>
+
+      <div class="panel" id="Footer">
+        <div class="textbox" id="FooterText">
+          <div class="text-content">
+            <h2>Hundred Plus Computer Repair</h2>
+            <p>2135 Woodside dr, El Centro, CA 92243</p>
+            <p>(760)909-7222</p>
+            <p>HundredPlusRepairs@gmail.com</p>
+            <p>Mon-Fri: 9:00am-5:00pm</p>
+            <p>Sat: 10:00am-4:00pm</p>
+            <p> </p>
+            <p>Serving the Imperial Valley since 2026  </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const Sidebar = document.getElementById("Sidebar");
+
+  menuButton.addEventListener("click", () => {
+    Sidebar.classList.toggle("active");
+  });
+</script>
+  
 
 </body>
+
 </html>

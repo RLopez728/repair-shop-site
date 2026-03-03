@@ -20,7 +20,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("../Images/FrontPageBackground.png");
+    background-image: url("../Images/MobileBackground.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,6 +34,7 @@ body {
 #Spacer4 { height: 20vh; }
 #Spacer5 { height: 10vh; }
 #Spacer6 { height: 30vh; }
+#Spacer7 { height: 10vh; }
 
 /* ====================== Sidebar ====================== */
 #menuButton {
@@ -61,10 +62,6 @@ body {
     gap: 10px;
     transition: left .3s ease;
     z-index: 1000;
-
-    box-shadow: 10px 0px 40px rgb(0, 0, 0);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 #Sidebar a {
@@ -80,6 +77,10 @@ body {
 
 #Sidebar.active {
     left: 0;
+
+    box-shadow: 10px 0px 40px rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 /* ====================== Front Page Panel ====================== */
@@ -112,7 +113,7 @@ body {
 }
 
 #Title .text-content {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.5;
     text-shadow: 2px 2px 4px black;
 }
@@ -178,6 +179,11 @@ body {
 
 #Services .text-content h2 {
     font-size: 35px;
+    color: rgba(255,255,255,0.925);
+}
+
+#Services .text-content h3 {
+    font-size: 25px;
     color: rgba(255,255,255,0.925);
 }
 
