@@ -340,7 +340,7 @@ body {
 }
 
 #FooterText .text-content {
-    font-size: 13px;
+    font-size: 10px;
     max-width: 800px;
     margin-left: 50px;
     color: rgba(255,255,255,0.678);
