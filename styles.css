@@ -10,13 +10,21 @@
 body {
     margin: 0;
     background-color: black;
-    background-image: url("../Images/FrontPageBackground.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-attachment: fixed;
     text-shadow: 2px 2px 4px black;
     font-family: 'ProFontWindows Nerd Font';
+}
+
+.bg-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Images/FrontPageBackground.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
 }
 
 /* ====================== Spacers ====================== */
