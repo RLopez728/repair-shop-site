@@ -8,6 +8,14 @@
 </head>
 <body>
 
+  <button id="menuButton">&#9776;</button>
+
+  <nav id="Sidebar">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <div class="spacer" id="Spacer1"></div>
 
   <div class="panel" id="FrontPage">
@@ -96,6 +104,11 @@
     <div class="panel-row">
 
       <div class="textbox" id="Trust">
+
+        <div class="textbox" id="TrustImage">
+          <img src="/Images/ComputerInternals.jpg" alt="Computer Repair">
+        </div>
+
         <div class="text-content">
           <h1>
             We know your computer holds more than just hardware — it holds your work, 
@@ -107,10 +120,6 @@
             information while restoring performance. All repairs are backed by our service 
             guarantee for added peace of mind.
         </div>
-      </div>
-
-      <div class="textbox" id="TrustImage">
-        <img src="/Images/ComputerInternals.jpg" alt="Computer Repair">
       </div>
 
     </div>
@@ -126,7 +135,7 @@
       </a>
     </div>
 
-    <div class="spacer" id="Spacer5"></div>
+    <div class="spacer" id="Spacer6"></div>
 
       <div class="panel" id="Footer">
         <div class="textbox" id="FooterText">
@@ -144,6 +153,16 @@
       </div>
 
   </div>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const Sidebar = document.getElementById("Sidebar");
+
+  menuButton.addEventListener("click", () => {
+    Sidebar.classList.toggle("active");
+  });
+</script>
+  
 
 </body>
 
