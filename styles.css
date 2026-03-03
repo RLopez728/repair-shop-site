@@ -46,7 +46,7 @@ body {
 #Spacer3 { height: 20vh; }
 #Spacer4 { height: 20vh; }
 #Spacer5 { height: 10vh; }
-#Spacer6 { height: 30vh; }
+#Spacer6 { height: 10vh; }
 #Spacer7 { height: 10vh; }
 
 /* ====================== Sidebar ====================== */
@@ -334,6 +334,9 @@ body {
     background-color: rgba(0,0,0,0.856);
     box-shadow: 0px -20px 40px rgba(0,0,0,1);
     padding: 40px 0px;
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 #FooterText .text-content {
