@@ -10,7 +10,7 @@
 body {
     margin: 0;
     background-color: black;
-    background-image: url("/Images/FrontPageBackground.png");
+    background-image: url("../Images/FrontPageBackground.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
