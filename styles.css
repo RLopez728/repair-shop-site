@@ -331,12 +331,12 @@ body {
 #Footer {
     width: 200%;
     min-height: 200px;
-    background-color: rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.932);
     box-shadow: 0px -20px 40px rgba(0,0,0,1);
     padding: 40px 0px;
     
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 #FooterText .text-content {
