@@ -159,20 +159,18 @@ body {
 }
 
 /* ====================== Panel Rows (TLDR + Image, Trust + Image) ====================== */
-.panel-row {
-    display: flex;
-    flex-direction: column;
+#TLDRRow, #TrustRow {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* ====================== TLDR Text ====================== */
+/* ====================== TLDR ====================== */
 #TLDR {
     background-color: rgba(0,0,0,0);
     border-radius: 15px;
     width: 100%;
     height: auto;
-
-    grid-column: 1 / -1;
 }
 
 #TLDR .text-content {
@@ -186,10 +184,9 @@ body {
     border-radius: 15px;
     width: 100%;
     height: auto;
+    object-fit: cover;
 
     box-shadow: 2px 2px 8px black;
-
-    grid-column: 1 / -1;
 }
 
 #TLDRImage img {
@@ -233,8 +230,6 @@ body {
     border-radius: 15px;
     width: 100%;
     height: auto;
-
-    grid-column: 1 / -1;
 }
 
 #Trust .text-content {
@@ -248,10 +243,9 @@ body {
     border-radius: 15px;
     width: 100%;
     height: auto;
+    object-fit: cover;
 
     box-shadow: 2px 2px 8px black;
-
-    grid-column: 1 / -1;
 }
 
 #TrustImage img {
@@ -263,6 +257,37 @@ body {
 }
 
 /* ====================== CTA Button ====================== */
+
+#bookButtonTop {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+
+    background: rgba(44,44,44,0.753);
+    color: rgba(255,255,255,0.925);
+    text-decoration: none;
+
+    font-family: 'ProFontWindows Nerd Font';
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#menuButton { top: calc(20px + env(safe-area-inset-top)); }
+#bookButtonTop { top: calc(20px + env(safe-area-inset-top)); }
+
 .cta {
     width: 100%;
     display: flex;
@@ -323,9 +348,82 @@ body {
 
 /* ====================== Desktop CSS ====================== */
 @media (min-width: 1024px) {
-    #FrontPage {
-        max-width: 1200px;
-        grid-template-columns: repeat(12, 1fr);
-        padding: 0 20px;
+
+    #TLDRRow > #TLDR,
+    #TLDRRow > #TLDRImage,
+    #TrustRow > #Trust,
+    #TrustRow > #TrustImage {
+        grid-column: auto !important;
     }
+
+    .bg-frontpage {
+        background-image: url("../Images/FrontPageBackground.png");
+        background-size: 100%;
+    }
+
+    .bg-services {
+        background-size: cover;
+    }
+
+    #Spacer1 { height: 70vh; }
+
+    #TLDRRow {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #TrustRow {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #TLDR, #Trust {
+        grid-column: auto;
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    #TLDRImage, #TrustImage {
+        width: 100%;
+        grid-column: auto;
+        align-self: center;
+    }
+
+    #TLDRImage img, #TrustImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    #TLDR .text-content {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    #Trust .text-content {
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .cta h1 {
+        font-size: 50px;
+        padding-bottom: 40px;
+    }
+
+    .book-btn {
+        padding: 28px 72px;
+        font-size: clamp(20px, 2.5w, 26px);
+        border-radius: 20px;
+    }
+
 }
