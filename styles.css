@@ -40,6 +40,19 @@ body {
     z-index: -1;
 }
 
+.bg-about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Images/AboutBackground.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
 /* ====================== Spacers ====================== */
 #Spacer1 { height: 75vh; }
 #Spacer2 { height: 20vh; }
@@ -174,7 +187,7 @@ body {
 }
 
 #TLDR .text-content {
-    font-size: 10px;
+    font-size: 25px;
     color: rgba(255,255,255,0.925);
     padding-top: 25px;
     text-align: center;
@@ -219,7 +232,7 @@ body {
     color: rgba(255,255,255,0.925);
 }
 
-#Services .text-content h3 {
+#Services .text-content p {
     font-size: 25px;
     color: rgba(255,255,255,0.925);
 }
@@ -233,7 +246,7 @@ body {
 }
 
 #Trust .text-content {
-    font-size: 10px;
+    font-size: 25px;
     color: rgba(255,255,255,0.925);
     padding-top: 25px;
     text-align: center;
@@ -249,6 +262,84 @@ body {
 }
 
 #TrustImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====================== About ====================== */
+#About {
+    background-color: rgba(0,0,0,0);
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+#About .text-content h1 {
+    font-size: 30px;
+    color: rgba(255,255,255,0.925);
+    padding-top: 25px;
+    text-align: center;
+}
+
+#About .text-content p {
+    font-size: 25px;
+    color: rgba(255,255,255,0.925);
+    padding-top: 25px;
+    text-align: center;
+}
+
+#AboutImage {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    box-shadow: 2px 2px 8px black;
+}
+
+#AboutImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====================== Service Area Section ====================== */
+#Area {
+    background-color: rgba(0,0,0,0);
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+#Area .text-content h1 {
+    font-size: 30px;
+    color: rgba(255,255,255,0.925);
+    padding-top: 25px;
+    text-align: center;
+}
+
+#Area .text-content p {
+    font-size: 25px;
+    color: rgba(255,255,255,0.925);
+    padding-top: 25px;
+    text-align: center;
+}
+
+#AreaImage {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    box-shadow: 2px 2px 8px black;
+}
+
+#AreaImage img {
     width: 100%;
     height: auto;
     border-radius: 15px;
@@ -359,6 +450,13 @@ body {
         grid-column: auto !important;
     }
 
+    #AboutRow > #About,
+    #AboutRow > #AboutImage,
+    #AreaRow > #Area,
+    #AreaRow > #AreaImage {
+        grid-column: auto !important;
+    }
+
     .bg-frontpage {
         background-image: url("Images/FrontPageBackground.png");
         background-size: 100%;
@@ -368,9 +466,14 @@ body {
         background-size: cover;
     }
 
+    #Title .text-content {
+        font-size: 40px;
+        text-align: center;
+    }
+
     #Spacer1 { height: 70vh; }
 
-    #TLDRRow {
+    #TLDRRow, #AboutRow {
         display: grid;
         grid-template-columns: 55% 45%;
         gap: 100px;
@@ -390,32 +493,71 @@ body {
         margin: 0 auto;
     }
 
-    #TLDR, #Trust {
+    #AreaRow, #Services {
+        display: grid;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #TLDR, #Trust, #About, #Area {
         grid-column: auto;
         width: 100%;
         text-align: left;
         font-size: 16px;
     }
 
-    #TLDRImage, #TrustImage {
+    #TLDRImage, #TrustImage, #AboutImage, #AreaImage {
         width: 100%;
         grid-column: auto;
         align-self: center;
     }
 
-    #TLDRImage img, #TrustImage img {
+    #TLDRImage img, #TrustImage img, #AboutImage img, #AreaImage img {
         width: 100%;
         height: auto;
     }
 
     #TLDR .text-content {
-        font-size: 16px;
+        font-size: 30px;
         text-align: left;
     }
 
     #Trust .text-content {
-        font-size: 14px;
+        font-size: 30px;
         text-align: right;
+    }
+
+    #About .text-content p {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    #Area .text-content h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #Area .text-content p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #Services .text-content h1 {
+        font-size: 120px;
+        text-align: center;
+    }
+
+    #Services .text-content h2 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #Services .text-content p {
+        font-size: 40px;
+        text-align: center;
     }
 
     .cta h1 {
